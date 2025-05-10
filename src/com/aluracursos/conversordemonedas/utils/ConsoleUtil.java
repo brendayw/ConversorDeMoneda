@@ -82,7 +82,8 @@ public class ConsoleUtil {
         System.out.println("          RESULTADO DE LA CONVERSIÓN          ");
         System.out.println("==============================================");
         System.out.printf("%.2f %s = %.2f %s%n", amount, from.getCode(), result, to.getCode());
-        System.out.println("Tasa de cambio: 1 " + from.getCode() + " = " + rate + " " + to.getCode());
+        System.out.printf("Tasa de cambio: 1 %s = %.8f %s%n", from.getCode(), rate, to.getCode());
+        System.out.printf("Tasa inversa:   1 %s = %.2f %s%n", to.getCode(), (1 / rate), from.getCode());
         System.out.println("\nPresione ENTER para continuar...");
         scanner.nextLine();
     }
